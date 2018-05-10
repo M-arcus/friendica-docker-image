@@ -1,0 +1,41 @@
+{
+  "id": "friendica.cloudronapp",
+  "title": "Friendica",
+  "author": "M-arcus",
+  "description": "file://DESCRIPTION.md",
+  "tagline": "Friendica",
+  "version": "3.6.0",
+  "healthCheckPath": "/",
+  "httpPort": 80,
+  "manifestVersion": 1,
+  "website": "https://friendi.ca/",
+  "contactEmail": "apps@cloudron.io",
+  "icon": "logo.png",
+  "addons": {
+    "mysql": {},
+    "localstorage": {},
+    "sendmail": {},
+    "redis": {},
+    "ldap": {}
+  },
+  "tcpPorts": {
+    "SFTP_PORT": {
+      "title": "SFTP Port",
+      "description": "SFTP Port. Disabling SFTP also disables phpMyAdmin",
+      "defaultValue": 2345
+    }
+  },
+  "tags": [
+    "apache",
+    "php",
+    "mysql",
+    "hosting",
+    "lamp",
+    "stacks",
+    "development"
+  ],
+  "mediaLinks": [],
+  "changelog": "file://CHANGELOG",
+  "minBoxVersion": "1.8.5",
+  "documentationUrl": "https://cloudron.io/documentation/apps/lamp/"
+}

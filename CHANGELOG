@@ -1,0 +1,57 @@
+[0.1.0]
+- initial version
+
+[0.1.1]
+- Update title and tagline
+
+[0.2.0]
+- Block executing php on /webdav
+- Update to new base image
+
+[0.3.0]
+- Replace webdav with sftp
+- Make php.ini configurable
+- Preinstall all common php modules
+- Update to base image 0.10.0
+
+[0.3.1]
+* Fix index.php display
+
+[0.4.0]
+* Remove simple auth
+
+[0.5.0]
+* Add phpMyAdmin
+
+[0.6.0]
+* Add cron support
+
+[0.6.1]
+* Increase default file upload limit to 64m
+
+[0.6.2]
+* Cleanup PHP sessions
+* Update PHP to 7.0.18
+
+[1.0.0]
+* Update PHP to 7.0.22
+* Fix issue where cron will endlessly try to send emails
+
+[1.1.0]
+* Remove unused oauth addon
+* Add documentationUrl
+
+[1.1.1]
+* Remove unused oauth addon
+* Add documentationUrl
+
+[1.1.2]
+* Fix addon urls
+
+[1.2.0]
+* Update PHP 7.0.28-0ubuntu0.16.04.1
+* Fix bug where env vars were not set in cron jobs
+
+[1.2.1]
+* Enable mod_headers
+
