@@ -18,12 +18,18 @@ or using the [Cloudron command line tooling](https://cloudron.io/references/cli.
 cloudron install --appstore-id friendica.cloudronapp
 ```
 
+## Registration
+
+Please set your starting email to 'admin@example.com' when first registering.
+Only then you will recieve admin rights.
+Be sure to change the email after registering.
+
 ## Building
 
 The app package can be built using the [Cloudron command line tooling](https://cloudron.io/references/cli.html).
 
 ```
-cd lamp-app
+cd friendica-docker-image
 
 cloudron build
 cloudron install
