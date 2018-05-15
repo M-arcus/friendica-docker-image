@@ -2,10 +2,11 @@
 
 set -eu
 
-mkdir -p /app/data/public /run/apache2 /run/proftpd /run/app /run/cron
+echo "Create base folders"
+mkdir -p /app/data /run/apache2 /run/proftpd /run/app /run/cron
 
 if ! [ -f /app/data/.initialized ]; then
-  echo "Fresh installation, setting up data directory..."
+  echo "Fresh installation start"
 
   # Setup commands here
   echo "Copying crontab file"
@@ -13,17 +14,17 @@ if ! [ -f /app/data/.initialized ]; then
   echo "Copying crontab file finished"
 
   echo "Copying Friendica code"
-  cp -rf /app/code/friendica/* /app/data/public/
-  echo "Copying finished"
+  cp -rf /app/code/friendica /app/data/public
+  echo "Copying Friendica code finished"
 
-  echo "Starting automatic installation"
+  echo "Automatic installation start"
   cd /app/data/public/
   bin/console autoinstall
   cd /app/data
-  echo "Installation done"
+  echo "Automatic Installation done"
 
   touch /app/data/.initialized
-  echo "Done."
+  echo "Fresh installation done"
 fi
 
 # cleanup for old apache2-app.conf
