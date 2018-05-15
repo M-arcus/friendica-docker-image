@@ -86,7 +86,7 @@ ADD supervisor/ /etc/supervisor/conf.d/
 RUN sed -e 's,^logfile=.*$,logfile=/run/supervisord.log,' -i /etc/supervisor/supervisord.conf
 
 # add code
-COPY start.sh /app/code/
+COPY start.sh crontab /app/code/
 
 # forgotten in the base image
 RUN chmod +x /usr/local/bin/composer

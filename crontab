@@ -1,0 +1,1 @@
+*/10 * * * * cd /app/data/public; php bin/worker.php

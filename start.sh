@@ -8,6 +8,10 @@ if ! [ -f /app/data/.initialized ]; then
   echo "Fresh installation, setting up data directory..."
 
   # Setup commands here
+  echo "Copying crontab file"
+  cp /app/code/crontab /app/data/
+  echo "Copying crontab file finished"
+
   echo "Copying Friendica code"
   cp -rf /app/code/friendica/* /app/data/public/
   echo "Copying finished"
