@@ -102,4 +102,4 @@ fi
 chown -R www-data:www-data /app/data /run/apache2 /run/proftpd /run/app
 
 echo "Starting supervisord"
-exec /usr/bin/supervisord --configuration /etc/supervisor/supervisord.conf --nodaemon -i Lamp
+exec /usr/bin/supervisord --configuration /etc/supervisor/supervisord.conf --nodaemon -i Friendica
