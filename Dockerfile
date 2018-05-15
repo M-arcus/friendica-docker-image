@@ -103,6 +103,9 @@ RUN git checkout 7997df877d709f5c7ca211449ad941b1be216a2d
 #install composer packages
 RUN /usr/local/bin/composer install --optimize-autoloader
 
+# install addons
+RUN git clone https://github.com/friendica/friendica-addons.git addon
+
 # copy config file
 COPY htconfig.php /app/code/friendica/
 
