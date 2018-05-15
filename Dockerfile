@@ -98,7 +98,7 @@ RUN git clone https://github.com/friendica/friendica.git /app/code/friendica
 WORKDIR /app/code/friendica
 
 # checkout specific version
-RUN git checkout 7997df877d709f5c7ca211449ad941b1be216a2d
+RUN git checkout 0848cef605bb6773852809a9cf3af5a5cc26bb10
 
 #install composer packages
 RUN /usr/local/bin/composer install --optimize-autoloader

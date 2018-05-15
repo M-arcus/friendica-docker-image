@@ -88,7 +88,7 @@ $a->config['system']['allowed_themes'] = 'quattro,vier,duepuntozero,smoothly,fri
 
 // default system theme
 
-$a->config['system']['theme'] = 'vier';
+$a->config['system']['theme'] = 'frio';
 
 
 // By default allow pseudonyms
