@@ -36,16 +36,16 @@ if (!empty(getenv('MYSQL_HOST'))
 // Set the database connection charset to full Unicode (utf8mb4).
 // Changing this value will likely corrupt the special characters.
 // You have been warned.
-$a->config['system']['db_charset'] = "utf8mb4";
+$a->config['system']['db_charset'] = 'utf8mb4';
 
 // Choose a legal default timezone. If you are unsure, use "America/Los_Angeles".
 // It can be changed later and only applies to timestamps for anonymous viewers.
 
-$default_timezone = 'America/Los_Angeles';
+$default_timezone = 'Europe/Berlin';
 
 // Default system language
 
-$a->config['system']['language'] = 'en';
+$a->config['system']['language'] = 'de';
 
 // What is your site name?
 
@@ -61,7 +61,7 @@ $a->config['sitename'] = "Friendica Social Network";
 // In order to perform system administration via the admin panel, admin_email
 // must precisely match the email address of the person logged in.
 
-$a->config['register_policy'] = REGISTER_OPEN;
+$a->config['register_policy'] = REGISTER_APPROVE;
 $a->config['register_text'] = '';
 $a->config['admin_email'] = 'admin@example.com';
 
@@ -84,7 +84,7 @@ $a->config['system']['rino_encrypt'] = 1;
 
 // allowed themes (change this from admin panel after installation)
 
-$a->config['system']['allowed_themes'] = 'quattro,vier,duepuntozero,smoothly,frio';
+$a->config['system']['allowed_themes'] = 'frio';
 
 // default system theme
 
@@ -106,3 +106,13 @@ $a->config['system']['allowed_link_protocols'] = ['ftp', 'ftps', 'mailto', 'cid'
 
 // Authentication cookie lifetime, in days
 $a->config['system']['auth_cookie_lifetime'] = 7;
+
+$a->config['system']['smtp'] = true;
+$a->config['system']['smtp_server'] = getenv('MAIL_SMTP_SERVER');
+$a->config['system']['smtp_port'] = getenv('MAIL_SMTP_PORT');
+$a->condig['system']['smtp_port_s'] = getenv('MAIL_SMTPS_PORT');
+$a->config['system']['smtp_username'] = getenv('MAIL_SMTP_USERNAME');
+$a->config['system']['smtp_password'] = getenv('MAIL_SMTP_PASSWORD');
+$a->config['system']['smtp_from'] = getenv('MAIL_FROM');
+$a->config['system']['smtp_domain'] = getenv('MAIL_DOMAIN');
+$a->config['system']['smtp_secure'] = 'tls';

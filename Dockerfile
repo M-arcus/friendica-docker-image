@@ -104,7 +104,7 @@ RUN git checkout 0848cef605bb6773852809a9cf3af5a5cc26bb10
 RUN /usr/local/bin/composer install --optimize-autoloader
 
 # install addons
-RUN git clone https://github.com/friendica/friendica-addons.git addon
+RUN git clone https://github.com/m-arcus/friendica-addons.git addon
 
 # copy config file
 COPY htconfig.php /app/code/friendica/
